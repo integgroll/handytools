@@ -31,5 +31,6 @@ def demutable(func):
         ret_func = func(*args, **kwargs)
         # Set the functions arguments back to their default state
         func.__defaults__, func.__kwdefaults__ = default_storage, kwdefault_storage
+        return ret_func
 
     return wrapper
